@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="static/css/styles.css">
+		
+        <title> Dogs Vs Cats </title>
+        {{ dropzone.load() }}
+        {{ dropzone.style('border: 2px dashed #0087F7; margin: 5%; min-height: 400px;') }}
+    </head>
+   <body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">CAT OR DOG CLASSIFIER</a>
+				</div>
+			</div>
+		</nav>
+		<br><br>
+		<div>
+			<h1>Drop images below to classify them as a Cat or a Dog</h1>
+			{{ dropzone.create(action_view='home') }}
+		</div>
+   </body>
+</html>

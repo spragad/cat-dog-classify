@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="static/css/styles.css">
+		
+        <title> Results </title>
+     </head>
+    <body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+				<a class="navbar-brand" href="/">CAT OR DOG CLASSIFIER</a>
+				</div>
+			</div>
+		</nav>
+		<br><br>
+			<h1>Classification Results :</h1>
+			<br>
+			<p align="center"><a href=clear ><button class=grey style="height:35px;width:75px">Back</button></a></p>
+			<br>
+			<ul>
+			{% for file_url in file_urls %}
+				<p><img style="height: 150px" src="{{ file_url }}"><strong>  -------->   {{ pred[loop.index-1] }} </strong></p>
+			{% endfor %}
+			</ul>
+	</body>
+</html>
